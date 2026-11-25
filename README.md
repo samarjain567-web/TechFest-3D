@@ -1,141 +1,104 @@
-# THE AETHER ENGINE — TECHFEST 2026 | IIT BOMBAY
-### An Immersive 3D Astrolabe & Science Experience
+# THE AETHER ENGINE — TechFest 3D Interactive Website
 
-[![Techfest 2026](https://img.shields.io/badge/TECHFEST-IIT_BOMBAY_2026-dfb15b.svg)](https://techfest.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-r160-38bdf8.svg)](https://threejs.org/)
-[![React](https://img.shields.io/badge/React-18-blue.svg)](https://react.dev/)
-[![GSAP](https://img.shields.io/badge/GSAP-ScrollTrigger-green.svg)](https://greensock.com/)
+An immersive 3D interactive website concept inspired by **Techfest, IIT Bombay**.
 
----
+The Aether Engine represents the journey of human curiosity, scientific discovery, engineering and technological innovation through an interactive digital experience.
 
-## 🌟 Concept Overview
-Inspired by the marriage of **Renaissance-era scientific invention** (da Vinci mechanics, armillary spheres, brass astrolabes) and **futuristic computational architecture**, **The Aether Engine** is a production-grade 3D interactive web portal commemorating the 30th Edition of Techfest, IIT Bombay.
+## Project Overview
 
-Rather than a generic cyberpunk or neon template, the visual identity employs:
-- **Primary background**: Midnight navy / near-black (`#06090e`)
-- **Secondary palette**: Warm parchment (`#ece5d8`), antique gold (`#dfb15b`), bronze (`#8c5d35`)
-- **Accent colors**: Luminous amber core (`#ff9800`) and subtle electric blue (`#38bdf8`)
-- **Typography**: Editorial classical serif (`Cinzel`), contemporary sans (`Plus Jakarta Sans`), and technical monospace (`Space Grotesk`).
+This project was developed as part of the Techfest IIT Bombay Campus Ambassador Web Development Task.
 
----
+The website combines modern web technologies, interactive 3D environments, cinematic animations and creative visual storytelling to create an engaging experience for visitors.
 
-## 🚀 Key Interactive Features
+## Key Features
 
-1. **Interactive 3D Aether Engine (`React Three Fiber` / `Three.js`)**:
-   - Multiple rotating metallic astrolabe rings with gear teeth and armillary calibrations.
-   - Central glowing energy singularity with dynamic breathing and plasma wireframe halo.
-   - Multi-tier planetary orbital mechanism revolving along calculated ellipses.
-   - Floating celestial particle dust and twinkling starfield.
-   - Real-time mouse reaction, hover mesh detection with HUD indicator, and user drag-rotation via OrbitControls.
+- **Interactive 3D Environment:** Immersive 3D visual elements and interactive objects.
+- **Scroll-Based Animations:** Smooth animations and transitions while navigating through sections.
+- **Dynamic Visual Effects:** Animated elements, lighting effects and interactive visual components.
+- **Modern UI/UX:** Premium typography, responsive layouts and carefully designed visual elements.
+- **Interactive Sections:** Explore technology, innovation and the Techfest experience.
+- **Responsive Design:** Adapted for desktop, tablet and mobile devices.
 
-2. **Scroll-Driven Camera Choreography (`GSAP ScrollTrigger`)**:
-   - Smoothly tracks scroll progress across all 6 sections.
-   - Transitions from hero composition into an interior engine dive, lateral viewing during cards/timeline, and a grand symmetric reassembly epilogue.
+*Note: Keep only the features that are actually implemented and working in the submitted version.*
 
-3. **Technological Frontiers (Interactive 3D Cards & Modals)**:
-   - 6 Core Pillars: AI, Robotics, Space Tech, Engineering, Innovation, and Coding.
-   - Interactive modal specification sheets detailing technical disciplines and verified Techfest initiatives.
+## Technology Stack
 
-4. **The Festival Experience (Editorial Asymmetry)**:
-   - Deep dive into International Robowars, Technical Competitions, Technoholix, Technology Summits, Workshops, and TWMUN.
-   - Official status badges adhering to verified information standards.
+- React
+- TypeScript
+- Vite
+- Three.js
+- React Three Fiber
+- React Three Drei
+- GSAP
+- CSS
 
-5. **Temporal Timeline (December 16–18, 2026)**:
-   - Interactive 3-day switcher highlighting Morning, Midday, and Evening milestone progressions across the IIT Bombay campus.
+## Installation and Setup
 
-6. **Accessibility & Responsive Engineering**:
-   - Fluid typography using CSS clamp.
-   - Mobile camera re-centering and particle throttling for ultra-smooth 60fps performance on all devices.
-   - Reduced-motion queries honored.
+Follow these steps to run the project locally.
 
----
+### 1. Clone the repository
 
-## 🛠️ Project Structure
-
-```
-TechFest/
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-├── src/
-│   ├── main.tsx
-│   ├── App.tsx
-│   ├── components/
-│   │   ├── Navbar.tsx
-│   │   ├── Hero.tsx
-│   │   ├── EvolutionOfIdeas.tsx
-│   │   ├── TechnologyFrontiers.tsx
-│   │   ├── FestivalExperience.tsx
-│   │   ├── Timeline.tsx
-│   │   ├── FinalExperience.tsx
-│   │   └── Footer.tsx
-│   ├── scenes/
-│   │   ├── EngineScene.tsx
-│   │   ├── AetherEngineCore.tsx
-│   │   ├── AstrolabeRing.tsx
-│   │   ├── OrbitalSystem.tsx
-│   │   └── ParticleField.tsx
-│   └── styles/
-│       └── global.css
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
----
+### 2. Navigate to the project directory
 
-## ⚡ Setup & Development Instructions
+```bash
+cd TechFest
+```
 
-### 1. Prerequisites
-Ensure you have **Node.js (v18+)** installed on your machine.
+### 3. Install dependencies
 
-### 2. Installation
-Open your terminal in the project directory and run:
 ```bash
 npm install
 ```
 
-### 3. Run Development Server
+### 4. Start the development server
+
 ```bash
 npm run dev
 ```
-Open `http://localhost:5173` in your browser.
 
-### 4. Build for Production
+Open the local URL displayed in your terminal to explore the website.
+
+### 5. Create a production build
+
 ```bash
 npm run build
 ```
-The optimized production bundle will be generated in the `dist/` directory.
 
-### 5. Preview Production Build
-```bash
-npm run preview
+## Project Structure
+
+```text
+TechFest/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── scenes/
+│   ├── animations/
+│   ├── styles/
+│   └── App.tsx
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
----
+*The structure above is illustrative. Adjust it to match the actual folders and files in the repository.*
 
-## 🌐 Deployment Instructions
+## Project Purpose
 
-### Deploy to Vercel
-1. Install Vercel CLI: `npm i -g vercel` or link your GitHub repository on [vercel.com](https://vercel.com).
-2. Framework Preset: **Vite**
-3. Build Command: `npm run build`
-4. Output Directory: `dist`
+The goal of this project is to demonstrate how modern web technologies can transform a conventional festival website into an immersive digital experience through 3D graphics, animation and interactive storytelling.
 
-### Deploy to Netlify
-1. Connect repository on [netlify.com](https://netlify.com).
-2. Build Command: `npm run build`
-3. Publish Directory: `dist`
+## Credits
 
-### Push to GitHub
-```bash
-git init
-git add .
-git commit -m "feat: complete Aether Engine Techfest 2026 interactive 3D website"
-git branch -M main
-git remote add origin <YOUR_GITHUB_REPOSITORY_URL>
-git push -u origin main
-```
+Developed independently as a creative website concept for the Techfest IIT Bombay Campus Ambassador Program.
 
----
+This is an independently developed concept project and is not the official Techfest website.
 
-## ⚖️ Creative Concept Notice
-*This interactive 3D web experience is an independently created creative concept and tribute for Techfest, IIT Bombay 2026. Official festival portals, registrations, and announcements are available at [techfest.org](https://techfest.org/).*
+Official website: https://techfest.org/
