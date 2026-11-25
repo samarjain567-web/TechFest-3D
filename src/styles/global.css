@@ -1,0 +1,233 @@
+:root {
+  --bg-primary: #05080d;
+  --bg-secondary: #0a0f18;
+  --bg-card: rgba(12, 18, 28, 0.72);
+  --bg-card-hover: rgba(18, 28, 44, 0.88);
+  
+  --gold-primary: #dfb15b;
+  --gold-light: #f6d896;
+  --gold-dark: #9e7529;
+  --bronze: #8c5d35;
+  --bronze-glow: rgba(223, 177, 91, 0.22);
+  
+  --parchment: #f2ebe0;
+  --parchment-muted: #9e998e;
+  
+  --electric-blue: #38bdf8;
+  --electric-glow: rgba(56, 189, 248, 0.28);
+  --amber-core: #ff9800;
+  
+  --border-gold: rgba(223, 177, 91, 0.2);
+  --border-gold-bright: rgba(223, 177, 91, 0.55);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+
+  --font-serif: 'Cinzel', serif, Georgia;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--parchment);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #05080d;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(223, 177, 91, 0.35);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(223, 177, 91, 0.7);
+}
+
+/* Typography Utility */
+.font-serif {
+  font-family: var(--font-serif);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Background Gradients & Grid */
+.bg-grid-overlay {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(223, 177, 91, 0.035) 0%, transparent 65%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 100% 100%, 54px 54px, 54px 54px;
+  pointer-events: none;
+}
+
+/* Renaissance Astrolabe decorative ring background */
+.astronomical-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 65% 35%, rgba(223, 177, 91, 0.05) 0%, rgba(5, 8, 13, 0.75) 55%, #05080d 96%);
+  pointer-events: none;
+}
+
+/* Canvas background container */
+.webgl-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+/* Glass & Metallic Panels */
+.renaissance-card {
+  background: linear-gradient(135deg, rgba(14, 22, 34, 0.75) 0%, rgba(8, 12, 20, 0.88) 100%);
+  border: 1px solid var(--border-gold);
+  backdrop-filter: blur(14px);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.renaissance-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  opacity: 0.35;
+  transition: opacity 0.4s ease;
+}
+
+.renaissance-card:hover {
+  border-color: var(--border-gold-bright);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 32px rgba(223, 177, 91, 0.14);
+}
+
+.renaissance-card:hover::before {
+  opacity: 0.9;
+}
+
+/* Editorial Buttons */
+.btn-aether {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  font-family: var(--font-serif);
+  font-size: 0.84rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--parchment);
+  background: linear-gradient(135deg, rgba(223, 177, 91, 0.16) 0%, rgba(140, 93, 53, 0.28) 100%);
+  border: 1px solid var(--gold-primary);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.btn-aether::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(246, 216, 150, 0.3), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-aether:hover {
+  background: linear-gradient(135deg, var(--gold-primary) 0%, var(--bronze) 100%);
+  color: #05080d;
+  box-shadow: 0 0 28px rgba(223, 177, 91, 0.42);
+  font-weight: 700;
+}
+
+.btn-aether:hover::after {
+  transform: translateX(100%);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--parchment-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  color: var(--parchment);
+  border-color: var(--border-gold);
+  background: rgba(223, 177, 91, 0.09);
+}
+
+/* Section Wrapper */
+.content-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 0 1.25rem;
+  }
+}
+
+/* Smooth section entrance classes triggered via GSAP */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s ease-out, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
